@@ -43,7 +43,7 @@ public class StateList {
 
         if (found) {
             // the state is the last item in the array
-            if (indexToDelete == size) {
+            if (indexToDelete == size - 1) {
                 statesArray[indexToDelete] = null;
             } else {
                 // shift all of the states down by one index in the array
@@ -51,6 +51,9 @@ public class StateList {
                     statesArray[indexToDelete] = statesArray[indexToDelete + 1];
                     indexToDelete++;
                 }// end while
+
+                // remove last element from after shifting
+                statesArray[size] = null;
             }//end if
 
             System.out.println("\nState: " + name + " removed.");
