@@ -53,7 +53,7 @@ public class StateList {
                 }// end while
 
                 // remove last element from after shifting
-                statesArray[size] = null;
+                statesArray[size - 1] = null;
             }//end if
 
             System.out.println("\nState: " + name + " removed.");
